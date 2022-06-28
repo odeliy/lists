@@ -1,8 +1,11 @@
-import React from "react";
-import ListItem from "./ListItem";
+import React from 'react'
+import ListItem from './ListItem/ListItem'
+import ListTitle from './ListTitle/ListTitle'
 
 function List({
   id,
+  title,
+  editTitle,
   index,
   listItems,
   addListItem,
@@ -14,8 +17,8 @@ function List({
 }) {
   return (
     <>
-      <h2>{`List #${index + 1}`}</h2>
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <ListTitle id={id} index={index} title={title} editTitle={editTitle} />
+      <div style={{ display: 'flex', alignItems: 'center' }}>
         <button onClick={() => addListItem(id)}>Add List Item</button>
         <button onClick={() => deleteList(id)}>Delete List</button>
       </div>
@@ -27,7 +30,7 @@ function List({
         deleteListItem={deleteListItem}
       />
     </>
-  );
+  )
 }
 
-export default List;
+export default List

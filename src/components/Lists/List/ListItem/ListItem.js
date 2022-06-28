@@ -1,5 +1,5 @@
-import React from "react";
-import { FcCancel } from "react-icons/fc";
+import React from 'react'
+import { FcCancel } from 'react-icons/fc'
 
 function ListItem({
   listItems,
@@ -13,20 +13,20 @@ function ListItem({
       {listItems.map((listItem, index) => (
         <div
           key={listItem.id}
-          style={{ display: "flex", alignItems: "center" }}
+          style={{ display: 'flex', alignItems: 'center' }}
         >
           <h5>{index + 1}</h5>
           <input
             type="checkbox"
             onChange={(e) => markDone(e, listItem.id)}
-            checked={listItem.isComplete ? "checked" : ""}
+            checked={listItem.isComplete ? 'checked' : ''}
           />
           <input
             value={listItem.text}
             onChange={(e) => handleUserInput(e, listItem.id)}
             style={{
               backgroundColor: listItem.color,
-              textDecoration: listItem.isComplete ? "line-through" : "",
+              textDecoration: listItem.isComplete ? 'line-through' : '',
             }}
           />
           <input
@@ -38,7 +38,7 @@ function ListItem({
         </div>
       ))}
     </>
-  );
+  )
 }
 
-export default ListItem;
+export default ListItem
