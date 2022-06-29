@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import {
+  colorBackground,
   colorSecondary,
   colorShadow,
+  colorWhite,
   defaultPadding,
   fontLarge,
   fontMedium,
@@ -33,6 +35,7 @@ const StyledListItem = styled.div`
   .list-item__list-item {
     width: 70%;
     font-size: ${fontMedium};
+    background-color: ${colorWhite};
     padding: 0 5px;
     border: none;
   }
