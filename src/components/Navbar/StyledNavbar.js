@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import headShake from 'react-animations/lib/headShake'
 import {
   siteWidth,
   colorPrimary,
@@ -8,10 +9,16 @@ import {
   fontLarge,
 } from '../../stylesData'
 
+const headShakeAnimation = keyframes`${headShake}`
+
 const StyledNavbar = styled.div`
   color: ${colorWhite};
   background-color: ${colorPrimary};
   box-shadow: 0px 3px 5px ${colorShadow};
+
+  .animate {
+    animation: 1s ${headShakeAnimation};
+  }
 
   header {
     height: 60px;
@@ -21,6 +28,7 @@ const StyledNavbar = styled.div`
     padding-right: ${defaultPadding};
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     .header__title {
       font-size: ${fontLarge};
