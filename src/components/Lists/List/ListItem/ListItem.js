@@ -1,5 +1,6 @@
 import React from 'react'
 import { FcCancel } from 'react-icons/fc'
+import StyledListItem from './StyledListItem'
 
 function ListItem({
   listItems,
@@ -11,31 +12,40 @@ function ListItem({
   return (
     <>
       {listItems.map((listItem, index) => (
-        <div
-          key={listItem.id}
-          style={{ display: 'flex', alignItems: 'center' }}
-        >
-          <h5>{index + 1}</h5>
+        <StyledListItem key={listItem.id}>
+          <span className="list-item__index">{index + 1}</span>
           <input
+            className="list-item__checkbox"
             type="checkbox"
             onChange={(e) => markDone(e, listItem.id)}
             checked={listItem.isComplete ? 'checked' : ''}
           />
-          <input
-            value={listItem.text}
-            onChange={(e) => handleUserInput(e, listItem.id)}
+          <div
+            className="list-item__color-marker"
             style={{
               backgroundColor: listItem.color,
+            }}
+          />
+          <input
+            className="list-item__list-item"
+            value={listItem.text}
+            placeholder="what to do..."
+            onChange={(e) => handleUserInput(e, listItem.id)}
+            style={{
               textDecoration: listItem.isComplete ? 'line-through' : '',
             }}
           />
           <input
+            className="list-item__color-picker"
             type="color"
             value={listItem.color}
             onChange={(e) => pickColor(e, listItem.id)}
           />
-          <FcCancel onClick={() => deleteListItem(listItem.id)} />
-        </div>
+          <FcCancel
+            className="list-item__delete-item"
+            onClick={() => deleteListItem(listItem.id)}
+          />
+        </StyledListItem>
       ))}
     </>
   )

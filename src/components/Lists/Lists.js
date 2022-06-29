@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { nanoid } from 'nanoid'
 import List from './List/List'
+import StyledLists from './StyledLists'
+import { templateData } from './templateData'
 
 // Structure of lists state
 // [
@@ -124,7 +126,16 @@ function Lists() {
   }, [lists])
 
   return (
-    <>
+    <StyledLists>
+      {lists.length === 0 && (
+        <h1 className="lists__title">
+          Add a new list to get started or{' '}
+          <a href="#" onClick={() => setLists(templateData)}>
+            click here
+          </a>{' '}
+          to pre-populate some lists and play around.
+        </h1>
+      )}
       {lists.map((list, index) => (
         <List
           key={list.id}
@@ -141,9 +152,15 @@ function Lists() {
           deleteList={deleteList}
         />
       ))}
-      <button onClick={() => setLists([])}>Clear All</button>
-      <button onClick={addList}>Add List</button>
-    </>
+      <div className="lists__button-holder">
+        <button className="button--primary" onClick={addList}>
+          Add List
+        </button>
+        <button className="button--secondary" onClick={() => setLists([])}>
+          Clear All
+        </button>
+      </div>
+    </StyledLists>
   )
 }
 

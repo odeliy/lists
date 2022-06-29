@@ -1,6 +1,7 @@
 import React from 'react'
 import ListItem from './ListItem/ListItem'
 import ListTitle from './ListTitle/ListTitle'
+import StyledList from './StyledList'
 
 function List({
   id,
@@ -16,11 +17,15 @@ function List({
   deleteList,
 }) {
   return (
-    <>
+    <StyledList>
       <ListTitle id={id} index={index} title={title} editTitle={editTitle} />
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <button onClick={() => addListItem(id)}>Add List Item</button>
-        <button onClick={() => deleteList(id)}>Delete List</button>
+      <div className="list__button-holder">
+        <button className="button--primary" onClick={() => addListItem(id)}>
+          Add List Item
+        </button>
+        <button className="button--secondary" onClick={() => deleteList(id)}>
+          Delete List
+        </button>
       </div>
       <ListItem
         listItems={listItems}
@@ -29,7 +34,7 @@ function List({
         markDone={markDone}
         deleteListItem={deleteListItem}
       />
-    </>
+    </StyledList>
   )
 }
 
