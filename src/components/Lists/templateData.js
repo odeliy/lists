@@ -67,7 +67,7 @@ export const templateData = [
       },
       {
         id: nanoid(),
-        text: 'Weed wacker',
+        text: 'Weed whacker',
         isComplete: false,
         color: '#808080',
       },
