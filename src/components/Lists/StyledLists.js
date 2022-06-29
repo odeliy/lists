@@ -3,6 +3,7 @@ import { defaultPadding, fontLarge, siteWidth } from '../../stylesData'
 
 const StyledLists = styled.div`
   max-width: ${siteWidth};
+  margin-inline: auto;
   margin-top: ${defaultPadding};
   padding-left: ${defaultPadding};
   padding-right: ${defaultPadding};
