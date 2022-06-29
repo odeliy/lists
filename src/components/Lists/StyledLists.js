@@ -1,5 +1,10 @@
 import styled from 'styled-components'
-import { defaultPadding, fontLarge, siteWidth } from '../../stylesData'
+import {
+  colorLink,
+  defaultPadding,
+  fontLarge,
+  siteWidth,
+} from '../../stylesData'
 
 const StyledLists = styled.div`
   max-width: ${siteWidth};
@@ -10,6 +15,11 @@ const StyledLists = styled.div`
 
   .lists__title {
     font-size: ${fontLarge};
+  }
+
+  .lists__psuedo-link {
+    color: ${colorLink};
+    cursor: pointer;
   }
 
   .lists__button-holder {

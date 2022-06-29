@@ -130,9 +130,13 @@ function Lists() {
       {lists.length === 0 && (
         <h1 className="lists__title">
           Add a new list to get started or{' '}
-          <a href="#" onClick={() => setLists(templateData)}>
+          <span
+            className="lists__psuedo-link"
+            href="#"
+            onClick={() => setLists(templateData)}
+          >
             click here
-          </a>{' '}
+          </span>{' '}
           to pre-populate some lists and play around.
         </h1>
       )}
