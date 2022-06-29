@@ -4,7 +4,6 @@ import {
   colorWhite,
   defaultBorderRadius,
   defaultPadding,
-  fontLarge,
 } from '../../../stylesData'
 
 const StyledList = styled.div`
