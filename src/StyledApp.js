@@ -7,7 +7,6 @@ import {
   colorSecondary,
   colorWhite,
   defaultBorderRadius,
-  fontMedium,
   fontSmall,
 } from './stylesData'
 
