@@ -19,14 +19,6 @@ function List({
   return (
     <StyledList>
       <ListTitle id={id} index={index} title={title} editTitle={editTitle} />
-      <div className="list__button-holder">
-        <button className="button--primary" onClick={() => addListItem(id)}>
-          Add List Item
-        </button>
-        <button className="button--secondary" onClick={() => deleteList(id)}>
-          Delete List
-        </button>
-      </div>
       <ListItem
         listItems={listItems}
         handleUserInput={handleUserInput}
@@ -34,6 +26,14 @@ function List({
         markDone={markDone}
         deleteListItem={deleteListItem}
       />
+      <div className="list__button-holder">
+        <button className="button--primary" onClick={() => addListItem(id)}>
+          Add Todo
+        </button>
+        <button className="button--secondary" onClick={() => deleteList(id)}>
+          Delete List
+        </button>
+      </div>
     </StyledList>
   )
 }

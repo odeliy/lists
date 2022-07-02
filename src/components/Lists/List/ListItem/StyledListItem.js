@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {
+  colorBackground,
   colorSecondary,
   colorShadow,
   colorWhite,
@@ -12,6 +13,11 @@ const StyledListItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: calc(${defaultPadding} / 2);
+
+  &:hover {
+    background-color: ${colorBackground};
+  }
 
   .list-item__index {
     font-weight: bold;
@@ -37,6 +43,11 @@ const StyledListItem = styled.div`
     background-color: ${colorWhite};
     padding: 0 5px;
     border: none;
+    cursor: pointer;
+  }
+
+  .list-item__list-item:focus {
+    cursor: auto;
   }
 
   .list-item__color-picker {

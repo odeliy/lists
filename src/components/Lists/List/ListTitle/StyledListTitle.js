@@ -2,6 +2,9 @@ import styled from 'styled-components'
 import { defaultPadding, fontLarge } from '../../../../stylesData'
 
 const StyledListTitle = styled.div`
+  margin-bottom: ${defaultPadding};
+  cursor: pointer;
+
   .list-title {
     display: flex;
     align-items: center;

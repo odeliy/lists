@@ -14,8 +14,7 @@ const StyledList = styled.div`
   border-radius: ${defaultBorderRadius};
 
   .list__button-holder {
-    margin-top: calc(${defaultPadding} / 2);
-    margin-bottom: calc(${defaultPadding} / 2);
+    margin-top: ${defaultPadding};
     display: flex;
     align-items: center;
     justify-content: space-between;
