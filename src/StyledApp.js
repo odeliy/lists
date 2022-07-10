@@ -14,6 +14,7 @@ const StyledApp = styled.div`
   min-height: 100vh;
   color: ${colorBlack};
   background-color: ${colorBackground};
+  padding-bottom: 80px;
 
   a {
     color: ${colorLink};
